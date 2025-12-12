@@ -26,6 +26,9 @@ importers:
       '@payloadcms/plugin-form-builder':
         specifier: 3.60.0
         version: 3.60.0(@types/react@19.1.8)(monaco-editor@0.54.0)(next@15.4.4(@babel/core@7.28.4)(@playwright/test@1.54.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.77.4))(payload@3.60.0(graphql@16.11.0)(typescript@5.7.3))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.7.3)
+      '@payloadcms/plugin-import-export':
+        specifier: ^3.62.1
+        version: 3.62.1(@payloadcms/ui@3.60.0(@types/react@19.1.8)(monaco-editor@0.54.0)(next@15.4.4(@babel/core@7.28.4)(@playwright/test@1.54.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.77.4))(payload@3.60.0(graphql@16.11.0)(typescript@5.7.3))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.7.3))(payload@3.60.0(graphql@16.11.0)(typescript@5.7.3))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@payloadcms/plugin-nested-docs':
         specifier: 3.60.0
         version: 3.60.0(payload@3.60.0(graphql@16.11.0)(typescript@5.7.3))
@@ -1444,6 +1447,12 @@ packages:
       react: ^19.0.0 || ^19.0.0-rc-65a56d0e-20241020
       react-dom: ^19.0.0 || ^19.0.0-rc-65a56d0e-20241020
 
+  '@payloadcms/plugin-import-export@3.62.1':
+    resolution: {integrity: sha512-8WxI/UX/KPWfEbDkB/xkexdMl+l+bBB2nFLQo38ZCePRiFTGIWCK3Dm7i8gRxzz8E2x64i5rsB3FD4wHEgRWUw==}
+    peerDependencies:
+      '@payloadcms/ui': 3.62.1
+      payload: 3.62.1
+
   '@payloadcms/plugin-nested-docs@3.60.0':
     resolution: {integrity: sha512-Th4DhJxwL8ER9xAIkYs+QGWpqhHpyp+A5XDkJyogLMvzaf1MQXYaQxf/IUbBjFvziSiPQZzPsUDqkNBWFdBJaQ==}
     peerDependencies:
@@ -1481,6 +1490,9 @@ packages:
 
   '@payloadcms/translations@3.60.0':
     resolution: {integrity: sha512-fuc/FwLOoPNWGcDuOWQ+blCDRDMCDb9/ZMoa447VVUhqmTIL0CXh0SIKdbMuhpyvq5nevQ6fxUOlV/pUj0A32A==}
+
+  '@payloadcms/translations@3.62.1':
+    resolution: {integrity: sha512-gamS7t8b9UmHOPl2uSzisJbehkaMiXOVuvmb0gGdR3kPqBq2wiqOV7G0zFFRda/efm6yZ1WxtrzqwnwhLD/ihA==}
 
   '@payloadcms/ui@3.60.0':
     resolution: {integrity: sha512-uhpTQ0NVSrmZY2W31VWdn7MAbCCMjcQVAy98Sg5DahGN1enONEEpkbe3L8bgpp3jFVwQAvqfdAYhnWnvpcj+5w==}
@@ -2790,6 +2802,12 @@ packages:
 
   csstype@3.1.3:
     resolution: {integrity: sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==}
+
+  csv-parse@5.6.0:
+    resolution: {integrity: sha512-l3nz3euub2QMg5ouu5U09Ew9Wf6/wQ8I++ch1loQ0ljmzhmfZYrH9fflS22i/PQEvsPvxCwxgz5q7UB8K1JO4Q==}
+
+  csv-stringify@6.6.0:
+    resolution: {integrity: sha512-YW32lKOmIBgbxtu3g5SaiqWNwa/9ISQt2EcgOq0+RAIFufFp9is6tqNnKahqE5kuKvrnYAzs28r+s6pXJR8Vcw==}
 
   damerau-levenshtein@1.0.8:
     resolution: {integrity: sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==}
@@ -6961,6 +6979,19 @@ snapshots:
       - supports-color
       - typescript
 
+  '@payloadcms/plugin-import-export@3.62.1(@payloadcms/ui@3.60.0(@types/react@19.1.8)(monaco-editor@0.54.0)(next@15.4.4(@babel/core@7.28.4)(@playwright/test@1.54.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.77.4))(payload@3.60.0(graphql@16.11.0)(typescript@5.7.3))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.7.3))(payload@3.60.0(graphql@16.11.0)(typescript@5.7.3))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+    dependencies:
+      '@faceless-ui/modal': 3.0.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@payloadcms/translations': 3.62.1
+      '@payloadcms/ui': 3.60.0(@types/react@19.1.8)(monaco-editor@0.54.0)(next@15.4.4(@babel/core@7.28.4)(@playwright/test@1.54.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.77.4))(payload@3.60.0(graphql@16.11.0)(typescript@5.7.3))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.7.3)
+      csv-parse: 5.6.0
+      csv-stringify: 6.6.0
+      payload: 3.60.0(graphql@16.11.0)(typescript@5.7.3)
+      qs-esm: 7.0.2
+    transitivePeerDependencies:
+      - react
+      - react-dom
+
   '@payloadcms/plugin-nested-docs@3.60.0(payload@3.60.0(graphql@16.11.0)(typescript@5.7.3))':
     dependencies:
       payload: 3.60.0(graphql@16.11.0)(typescript@5.7.3)
@@ -7043,6 +7074,10 @@ snapshots:
       - yjs
 
   '@payloadcms/translations@3.60.0':
+    dependencies:
+      date-fns: 4.1.0
+
+  '@payloadcms/translations@3.62.1':
     dependencies:
       date-fns: 4.1.0
 
@@ -8468,6 +8503,10 @@ snapshots:
       rrweb-cssom: 0.8.0
 
   csstype@3.1.3: {}
+
+  csv-parse@5.6.0: {}
+
+  csv-stringify@6.6.0: {}
 
   damerau-levenshtein@1.0.8: {}
 

@@ -1,16 +1,18 @@
 import type { CollectionConfig } from 'payload'
 
 import { anyone } from '../access/anyone'
-import { authenticated } from '../access/authenticated'
+import { createAcl } from '@/access/createAcl'
+import { updateAcl } from '@/access/updateAcl'
+import { deleteAcl } from '@/access/deleteAcl'
 import { slugField } from 'payload'
 
 export const Categories: CollectionConfig = {
   slug: 'categories',
   access: {
-    create: authenticated,
-    delete: authenticated,
+    create: ({ req, id }) => createAcl(req, 'categories'),
+    delete: ({ req, id }) => deleteAcl(req, 'categories'),
     read: anyone,
-    update: authenticated,
+    update: ({ req, id }) => updateAcl(req, 'categories'),
   },
   admin: {
     useAsTitle: 'title',

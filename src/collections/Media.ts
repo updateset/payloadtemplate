@@ -10,6 +10,9 @@ import { fileURLToPath } from 'url'
 
 import { anyone } from '../access/anyone'
 import { authenticated } from '../access/authenticated'
+import { createAcl } from '@/access/createAcl'
+import { updateAcl } from '@/access/updateAcl'
+import { deleteAcl } from '@/access/deleteAcl'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -17,10 +20,10 @@ const dirname = path.dirname(filename)
 export const Media: CollectionConfig = {
   slug: 'media',
   access: {
-    create: authenticated,
-    delete: authenticated,
+    create: ({ req, id }) => createAcl(req, 'media'),
+    delete: ({ req, id }) => deleteAcl(req, 'media'),
     read: anyone,
-    update: authenticated,
+    update: ({ req, id }) => updateAcl(req, 'media'),
   },
   fields: [
     {
