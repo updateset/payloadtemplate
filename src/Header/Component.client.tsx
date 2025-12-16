@@ -92,6 +92,7 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
 
   return (
     <header
+      ref={containerRef}
       className="p-4 sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-4 md:px-6 lg:px-8 [&_*]:no-underline transition-colors duration-300 "
       {...(theme ? { 'data-theme': theme } : {})}
     >
@@ -158,10 +159,3 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
     </header>
   )
 }
-
-/*
-<div className="py-8 flex justify-between">
-        
-        <HeaderNav data={data} />
-      </div>
-      */
