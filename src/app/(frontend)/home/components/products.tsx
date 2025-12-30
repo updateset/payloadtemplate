@@ -133,7 +133,18 @@ export function Products() {
                 width={200}
                 height={200}
               />
-              <h3 className="text-2xl font-semibold mb-4">Portal Component Library</h3>
+              <h3 className="text-2xl font-semibold mb-4">
+                <a
+                  ref={imageRef}
+                  href="https://store.servicenow.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block transition-transform hover:scale-105"
+                  aria-label="View Portal Component Library on ServiceNow Store"
+                >
+                  Portal Component Library
+                </a>
+              </h3>
               <p className="text-lg leading-relaxed text-gray-600 mb-4">
                 Our Portal Component Library provides a collection of reusable UI components that
                 are pre-built with accessibility best practices in mind.
@@ -150,7 +161,7 @@ export function Products() {
           <div className="relative shrink-0">
             {/* Background Image */}
             <div
-              className="absolute inset-0 pointer-events-none"
+              className="absolute inset-0 pointer-events-none overflow-hidden"
               style={{ bottom: -250, right: -180 }}
             >
               <Image
@@ -158,8 +169,8 @@ export function Products() {
                 alt=""
                 className="w-full h-full object-contain object-right hidden md:block"
                 aria-hidden="true"
-                width={600}
-                height={600}
+                width={400}
+                height={400}
               />
             </div>
             <a

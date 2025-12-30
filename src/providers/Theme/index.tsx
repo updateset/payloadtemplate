@@ -22,24 +22,16 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
 
   const setTheme = useCallback((themeToSet: Theme | null) => {
     if (themeToSet === null) {
-      window.localStorage.removeItem(themeLocalStorageKey)
       document.documentElement.setAttribute('data-theme', defaultTheme)
       setThemeState(defaultTheme)
     } else {
       setThemeState(themeToSet)
-      window.localStorage.setItem(themeLocalStorageKey, themeToSet)
-      document.documentElement.setAttribute('data-theme', themeToSet)
+      document.documentElement.setAttribute('data-theme', 'dark')
     }
   }, [])
 
   useEffect(() => {
     let themeToSet: Theme = defaultTheme
-    const preference = window.localStorage.getItem(themeLocalStorageKey)
-
-    if (themeIsValid(preference)) {
-      themeToSet = preference
-    }
-
     document.documentElement.setAttribute('data-theme', themeToSet)
     setThemeState(themeToSet)
   }, [])

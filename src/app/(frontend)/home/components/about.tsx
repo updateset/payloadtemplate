@@ -80,6 +80,10 @@ const federalLogos: CompanyLogo[] = [
 
 const entLogos: CompanyLogo[] = [
   {
+    name: 'Abercrombie & Fitch',
+    logo: '/logo/enterprise/Abercrombie-Fitch-Emblem.svg',
+  },
+  {
     name: 'AMAZON',
     logo: '/logo/enterprise/2000-Present-Logo-B.svg',
   },
@@ -108,6 +112,10 @@ const entLogos: CompanyLogo[] = [
     logo: '/logo/enterprise/Dell_Logo.svg',
   },
   {
+    name: 'Deloitte',
+    logo: '/logo/enterprise/Logo_of_Deloitte.svg',
+  },
+  {
     name: 'Equifax',
     logo: '/logo/enterprise/Equifax_Logo.svg',
   },
@@ -120,11 +128,11 @@ const entLogos: CompanyLogo[] = [
     logo: '/logo/enterprise/Leidos_logo_2013.svg',
   },
   {
-    name: 'Deloitte',
-    logo: '/logo/enterprise/Logo_of_Deloitte.svg',
+    name: 'Nationwide',
+    logo: '/logo/enterprise/nationwide-logo-png_seeklogo-324106.svg',
   },
   {
-    name: 'Ownes',
+    name: 'Owens Corning',
     logo: '/logo/enterprise/Owens_Corning_logo.svg',
   },
   {
@@ -134,6 +142,10 @@ const entLogos: CompanyLogo[] = [
   {
     name: 'SalesForce',
     logo: '/logo/enterprise/Salesforce.com_logo.svg',
+  },
+  {
+    name: 'ServiceNow',
+    logo: '/logo/enterprise/servicenow_logo_icon_168835.svg',
   },
   {
     name: 'T-Mobile',
@@ -150,6 +162,10 @@ const entLogos: CompanyLogo[] = [
   {
     name: 'TD Bank',
     logo: '/logo/enterprise/Toronto-Dominion_Bank_logo.svg',
+  },
+  {
+    name: 'United Bank',
+    logo: '/logo/enterprise/united-bank.svg',
   },
   {
     name: 'Urban One',

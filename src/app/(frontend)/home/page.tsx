@@ -15,7 +15,7 @@ export default function Home() {
       link: 'https://www.servicenow.com/',
     },
     {
-      name: 'DocuSign',
+      name: 'Docusign',
       logo: '/docusign.svg',
       link: 'https://www.docusign.com/',
     },

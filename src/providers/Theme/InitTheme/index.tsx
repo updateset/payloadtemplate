@@ -11,17 +11,7 @@ export const InitTheme: React.FC = () => {
         __html: `
   (function () {
 
-
-    function themeIsValid(theme) {
-      return theme === 'light' || theme === 'dark'
-    }
-
     var themeToSet = '${defaultTheme}'
-    var preference = window.localStorage.getItem('${themeLocalStorageKey}')
-
-    if (themeIsValid(preference)) {
-      themeToSet = preference
-    }
 
     document.documentElement.setAttribute('data-theme', themeToSet)
   })();

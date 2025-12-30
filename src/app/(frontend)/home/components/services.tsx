@@ -202,8 +202,8 @@ export function Services({ services }: ServicesProps) {
           ref={descriptionRef}
           className="mb-12 max-w-3xl text-lg leading-relaxed text-muted-foreground sm:text-xl"
         >
-          Comprehensive solutions designed to elevate your enterprise operations and drive
-          sustainable growth.
+          We provide comprehensive solutions designed to elevate your enterprise operations and
+          drive sustainable growth.
         </p>
 
         {/* Services Content with Card Layout */}
