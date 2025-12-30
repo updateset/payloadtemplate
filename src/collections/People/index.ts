@@ -8,10 +8,10 @@ import { deleteAcl } from '@/access/deleteAcl'
 export const People: CollectionConfig<'people'> = {
   slug: 'people',
   access: {
-    create: ({ req, id }) => createAcl(req, 'people'),
-    delete: ({ req, id }) => deleteAcl(req, 'people'),
+    create: ({ req }) => createAcl(req, 'people'),
+    delete: ({ req }) => deleteAcl(req, 'people'),
     read: authenticatedOrPublished,
-    update: ({ req, id }) => updateAcl(req, 'people'),
+    update: ({ req }) => updateAcl(req, 'people'),
   },
   defaultPopulate: {},
   admin: {

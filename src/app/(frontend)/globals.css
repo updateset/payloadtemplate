@@ -1,6 +1,6 @@
-@import "tailwindcss";
-@import "tw-animate-css";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @config "../../../tailwind.config.mjs";
 
@@ -107,14 +107,14 @@
   --shadow-spread: 0rem;
   --shadow-opacity: 0.2;
   --shadow-color: #000000;
-  --shadow-2xs: 0rem 0.5rem 0.75rem 0rem hsl(0 0% 0% / 0.10);
-  --shadow-xs: 0rem 0.5rem 0.75rem 0rem hsl(0 0% 0% / 0.10);
-  --shadow-sm: 0rem 0.5rem 0.75rem 0rem hsl(0 0% 0% / 0.20), 0rem 1px 2px -1px hsl(0 0% 0% / 0.20);
-  --shadow: 0rem 0.5rem 0.75rem 0rem hsl(0 0% 0% / 0.20), 0rem 1px 2px -1px hsl(0 0% 0% / 0.20);
-  --shadow-md: 0rem 0.5rem 0.75rem 0rem hsl(0 0% 0% / 0.20), 0rem 2px 4px -1px hsl(0 0% 0% / 0.20);
-  --shadow-lg: 0rem 0.5rem 0.75rem 0rem hsl(0 0% 0% / 0.20), 0rem 4px 6px -1px hsl(0 0% 0% / 0.20);
-  --shadow-xl: 0rem 0.5rem 0.75rem 0rem hsl(0 0% 0% / 0.20), 0rem 8px 10px -1px hsl(0 0% 0% / 0.20);
-  --shadow-2xl: 0rem 0.5rem 0.75rem 0rem hsl(0 0% 0% / 0.50);
+  --shadow-2xs: 0rem 0.5rem 0.75rem 0rem hsl(0 0% 0% / 0.1);
+  --shadow-xs: 0rem 0.5rem 0.75rem 0rem hsl(0 0% 0% / 0.1);
+  --shadow-sm: 0rem 0.5rem 0.75rem 0rem hsl(0 0% 0% / 0.2), 0rem 1px 2px -1px hsl(0 0% 0% / 0.2);
+  --shadow: 0rem 0.5rem 0.75rem 0rem hsl(0 0% 0% / 0.2), 0rem 1px 2px -1px hsl(0 0% 0% / 0.2);
+  --shadow-md: 0rem 0.5rem 0.75rem 0rem hsl(0 0% 0% / 0.2), 0rem 2px 4px -1px hsl(0 0% 0% / 0.2);
+  --shadow-lg: 0rem 0.5rem 0.75rem 0rem hsl(0 0% 0% / 0.2), 0rem 4px 6px -1px hsl(0 0% 0% / 0.2);
+  --shadow-xl: 0rem 0.5rem 0.75rem 0rem hsl(0 0% 0% / 0.2), 0rem 8px 10px -1px hsl(0 0% 0% / 0.2);
+  --shadow-2xl: 0rem 0.5rem 0.75rem 0rem hsl(0 0% 0% / 0.5);
 }
 
 @theme inline {
@@ -179,11 +179,9 @@
   }
 }
 
-
-
 html {
   opacity: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 html[data-theme='dark'],

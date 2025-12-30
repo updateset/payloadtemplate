@@ -31,7 +31,7 @@ const HamburgerIcon = ({ className, ...props }: React.SVGAttributes<SVGElement>)
     strokeLinecap="round"
     strokeLinejoin="round"
     xmlns="http://www.w3.org/2000/svg"
-    {...(props as any)}
+    {...props}
   >
     <path
       d="M4 12L20 12"

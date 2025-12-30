@@ -9,10 +9,10 @@ import { slugField } from 'payload'
 export const Categories: CollectionConfig = {
   slug: 'categories',
   access: {
-    create: ({ req, id }) => createAcl(req, 'categories'),
-    delete: ({ req, id }) => deleteAcl(req, 'categories'),
+    create: ({ req }) => createAcl(req, 'categories'),
+    delete: ({ req }) => deleteAcl(req, 'categories'),
     read: anyone,
-    update: ({ req, id }) => updateAcl(req, 'categories'),
+    update: ({ req }) => updateAcl(req, 'categories'),
   },
   admin: {
     useAsTitle: 'title',

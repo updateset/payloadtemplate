@@ -5,6 +5,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
+import Image from 'next/image'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -134,15 +135,15 @@ export function Partners({ partners }: PartnersProps) {
           ref={titleRef}
           className="mb-6 text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl"
         >
-          WE'VE PARTNERED WITH INDUSTRY LEADERS
+          WE&apos;VE PARTNERED WITH INDUSTRY LEADERS
         </h2>
         <p
           ref={descriptionRef}
           className="mb-12 text-lg leading-relaxed text-muted-foreground sm:text-xl"
         >
-          We're experts that understand the unique complexity of each enterprise. That's why we've
-          partnered with industry leaders to streamline your workflows to achieve scalable
-          enterprise growth and unmatched enterprise visibility.
+          We&apos;re experts that understand the unique complexity of each enterprise. That&apos;s
+          why we&apos;ve partnered with industry leaders to streamline your workflows to achieve
+          scalable enterprise growth and unmatched enterprise visibility.
         </p>
 
         <div ref={cardsRef} className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
@@ -174,10 +175,12 @@ export function Partners({ partners }: PartnersProps) {
                 <CardHeader>
                   {/* Logo Container */}
                   <div className="mb-4 flex h-80 items-center justify-center">
-                    <img
+                    <Image
                       src={partner.logo}
                       alt={`${partner.name} logo`}
                       className="h-64 w-auto object-contain"
+                      width={200}
+                      height={200}
                     />
                   </div>
 

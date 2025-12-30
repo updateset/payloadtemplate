@@ -8,10 +8,10 @@ import { deleteAcl } from '@/access/deleteAcl'
 export const Companies: CollectionConfig<'companies'> = {
   slug: 'companies',
   access: {
-    create: ({ req, id }) => createAcl(req, 'companies'),
-    delete: ({ req, id }) => deleteAcl(req, 'companies'),
+    create: ({ req }) => createAcl(req, 'companies'),
+    delete: ({ req }) => deleteAcl(req, 'companies'),
     read: authenticatedOrPublished,
-    update: ({ req, id }) => updateAcl(req, 'companies'),
+    update: ({ req }) => updateAcl(req, 'companies'),
   },
   // This config controls what's populated by default when a page is referenced
   // https://payloadcms.com/docs/queries/select#defaultpopulate-collection-config-property

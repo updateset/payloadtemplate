@@ -797,7 +797,20 @@ export interface Form {
  */
 export interface Access {
   id: string;
-  collection: 'access' | 'categories' | 'groups' | 'media' | 'pages' | 'posts' | 'users';
+  collection:
+    | 'access'
+    | 'categories'
+    | 'companies'
+    | 'groups'
+    | 'media'
+    | 'opportunities'
+    | 'pages'
+    | 'people'
+    | 'posts'
+    | 'resources'
+    | 'tasks'
+    | 'users'
+    | 'webServiceUsers';
   create?:
     | {
         group?: (string | null) | Group;
@@ -971,6 +984,7 @@ export interface Task {
  */
 export interface WebServiceUser {
   id: string;
+  isAdmin?: boolean | null;
   updatedAt: string;
   createdAt: string;
   enableAPIKey?: boolean | null;
@@ -1830,6 +1844,7 @@ export interface TasksSelect<T extends boolean = true> {
  * via the `definition` "webServiceUsers_select".
  */
 export interface WebServiceUsersSelect<T extends boolean = true> {
+  isAdmin?: T;
   updatedAt?: T;
   createdAt?: T;
   enableAPIKey?: T;

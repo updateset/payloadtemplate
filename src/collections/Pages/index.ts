@@ -26,10 +26,10 @@ import {
 export const Pages: CollectionConfig<'pages'> = {
   slug: 'pages',
   access: {
-    create: ({ req, id }) => createAcl(req, 'pages'),
-    delete: ({ req, id }) => deleteAcl(req, 'pages'),
+    create: ({ req }) => createAcl(req, 'pages'),
+    delete: ({ req }) => deleteAcl(req, 'pages'),
     read: authenticatedOrPublished,
-    update: ({ req, id }) => updateAcl(req, 'pages'),
+    update: ({ req }) => updateAcl(req, 'pages'),
   },
   // This config controls what's populated by default when a page is referenced
   // https://payloadcms.com/docs/queries/select#defaultpopulate-collection-config-property

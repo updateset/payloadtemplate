@@ -32,10 +32,10 @@ import { slugField } from 'payload'
 export const Posts: CollectionConfig<'posts'> = {
   slug: 'posts',
   access: {
-    create: ({ req, id }) => createAcl(req, 'posts'),
-    delete: ({ req, id }) => deleteAcl(req, 'posts'),
+    create: ({ req }) => createAcl(req, 'posts'),
+    delete: ({ req }) => deleteAcl(req, 'posts'),
     read: authenticatedOrPublished,
-    update: ({ req, id }) => updateAcl(req, 'posts'),
+    update: ({ req }) => updateAcl(req, 'posts'),
   },
   // This config controls what's populated by default when a post is referenced
   // https://payloadcms.com/docs/queries/select#defaultpopulate-collection-config-property

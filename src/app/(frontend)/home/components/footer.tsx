@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export function Footer() {
   return (
     <footer className="w-full border-t bg-background">
@@ -7,7 +9,13 @@ export function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-4">
             {/* Logo - Left Side */}
             <div className="flex justify-start md:justify-start">
-              <img src="/updateset.png" alt="UpdateSet" className="h-32 w-auto" />
+              <Image
+                src="/updateset.png"
+                alt="UpdateSet"
+                width={1024}
+                height={800}
+                className="h-32 w-auto"
+              />
             </div>
 
             {/* Copyright - Middle */}

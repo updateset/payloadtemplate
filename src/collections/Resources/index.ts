@@ -9,10 +9,10 @@ import { computeName } from './hooks/computeName'
 export const Resources: CollectionConfig<'resources'> = {
   slug: 'resources',
   access: {
-    create: ({ req, id }) => createAcl(req, 'resources'),
-    delete: ({ req, id }) => deleteAcl(req, 'resources'),
+    create: ({ req }) => createAcl(req, 'resources'),
+    delete: ({ req }) => deleteAcl(req, 'resources'),
     read: authenticatedOrPublished,
-    update: ({ req, id }) => updateAcl(req, 'resources'),
+    update: ({ req }) => updateAcl(req, 'resources'),
   },
   defaultPopulate: {},
   admin: {

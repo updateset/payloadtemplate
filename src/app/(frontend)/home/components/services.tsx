@@ -7,20 +7,21 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
-// Type declarations for Unicorn Studio (UnicornStudio global is declared in hero.tsx)
+interface UnicornStudio {
+  isInitialized: boolean
+  init?: () => void
+}
+
 declare global {
   interface Window {
-    UnicornStudio?: {
-      isInitialized: boolean
-      init?: () => void
-    }
+    UnicornStudio?: UnicornStudio
   }
 }
 
 export interface Service {
   title: string
   description: string
-  icon: any
+  icon: React.ReactNode
 }
 
 interface ServicesProps {
@@ -72,7 +73,7 @@ export function Services({ services }: ServicesProps) {
       // Wait for UnicornStudio global to be available
       const checkInit = () => {
         // UnicornStudio is a global variable exposed by the script
-        const UnicornStudioGlobal = (globalThis as any).UnicornStudio
+        const UnicornStudioGlobal = window.UnicornStudio
         if (UnicornStudioGlobal && typeof UnicornStudioGlobal.init === 'function') {
           if (window.UnicornStudio && !window.UnicornStudio.isInitialized) {
             UnicornStudioGlobal.init()

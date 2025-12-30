@@ -9,10 +9,10 @@ import { computeTotal } from './hooks/computeTotal'
 export const Opportunities: CollectionConfig<'opportunities'> = {
   slug: 'opportunities',
   access: {
-    create: ({ req, id }) => createAcl(req, 'opportunities'),
-    delete: ({ req, id }) => deleteAcl(req, 'opportunities'),
+    create: ({ req }) => createAcl(req, 'opportunities'),
+    delete: ({ req }) => deleteAcl(req, 'opportunities'),
     read: authenticatedOrPublished,
-    update: ({ req, id }) => updateAcl(req, 'opportunities'),
+    update: ({ req }) => updateAcl(req, 'opportunities'),
   },
   // This config controls what's populated by default when a page is referenced
   // https://payloadcms.com/docs/queries/select#defaultpopulate-collection-config-property

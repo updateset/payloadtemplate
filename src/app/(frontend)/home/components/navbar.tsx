@@ -6,15 +6,17 @@ import { Button } from '@/components/ui/button'
 import {
   NavigationMenu,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
 } from '@/components/ui/navigation-menu'
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 import { cn } from '@/utilities/ui'
+import Image from 'next/image'
 
 // Logo component for UpdateSet
 const Logo = () => {
-  return <img src="/updateset.png" alt="UpdateSet" className="h-16 w-auto" />
+  return (
+    <Image src="/updateset.png" alt="UpdateSet" width={1024} height={800} className="h-16 w-auto" />
+  )
 }
 
 // Hamburger icon component
@@ -30,7 +32,7 @@ const HamburgerIcon = ({ className, ...props }: React.SVGAttributes<SVGElement>)
     strokeLinecap="round"
     strokeLinejoin="round"
     xmlns="http://www.w3.org/2000/svg"
-    {...(props as any)}
+    {...props}
   >
     <path
       d="M4 12L20 12"
@@ -81,9 +83,7 @@ export const Navbar = React.forwardRef<HTMLElement, NavbarProps>(
       logoHref = '#',
       navigationLinks = defaultNavigationLinks,
       loginText = 'Login',
-      loginHref = '#login',
       ctaText = 'Join up',
-      ctaHref = '#join',
       onLoginClick,
       onCtaClick,
       ...props
@@ -133,7 +133,7 @@ export const Navbar = React.forwardRef<HTMLElement, NavbarProps>(
           'sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-4 md:px-6 lg:px-8 [&_*]:no-underline',
           className,
         )}
-        {...(props as any)}
+        {...props}
       >
         <div className="w-full grid h-16 grid-cols-3 items-center gap-4 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
           {/* Left side - Logo */}

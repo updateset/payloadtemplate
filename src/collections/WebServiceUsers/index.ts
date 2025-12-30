@@ -5,6 +5,11 @@ export const WebServiceUsers: CollectionConfig = {
   auth: {
     useAPIKey: true,
   },
-  fields: [],
+  fields: [
+    {
+      name: 'isAdmin',
+      type: 'checkbox',
+    },
+  ],
   timestamps: true,
 }

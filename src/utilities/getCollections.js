@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 
-function readCollection(collectionPath = 'C:\\code\\freeflow\\freeflow\\src\\collections') {
+function readCollection(collectionPath = '../collections') {
   const filesAndFolders = []
   const items = fs.readdirSync(collectionPath)
 

@@ -196,12 +196,12 @@ export function About() {
             </div>
             <div>
               <h2 className="mb-6 text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl">
-                WE'RE UPDATESET
+                WE&apos;RE UPDATESET
               </h2>
               <p className="max-w-3xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
-                At UpdateSet, we're more than just a technology services company—we're your
-                strategic partner in digital transformation. As a women-owned small business, we
-                bring a unique blend of agility, expertise, and a commitment to building lasting
+                At UpdateSet, we&apos;re more than just a technology services company—we&apos;re
+                your strategic partner in digital transformation. As a women-owned small business,
+                we bring a unique blend of agility, expertise, and a commitment to building lasting
                 relationships. We specialize in ServiceNow, DocuSign, and Axonius, empowering
                 organizations to streamline workflows, enhance security, and drive efficiency.
               </p>

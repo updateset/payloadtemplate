@@ -1,8 +1,8 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
-import { Button } from '@/components/ui/button'
 import gsap from 'gsap'
+import Image from 'next/image'
 
 export function Products() {
   const productsRef = useRef<HTMLDivElement>(null)
@@ -126,10 +126,12 @@ export function Products() {
           {/* Content Section */}
           <div ref={productsContentRef} className="flex-1 space-y-6">
             <div>
-              <img
+              <Image
                 src="/ServiceNow-Certified-App.jpg"
                 alt="ServiceNow Certified App"
                 className="mb-4 w-auto h-16"
+                width={200}
+                height={200}
               />
               <h3 className="text-2xl font-semibold mb-4">Portal Component Library</h3>
               <p className="text-lg leading-relaxed text-gray-600 mb-4">
@@ -137,8 +139,9 @@ export function Products() {
                 are pre-built with accessibility best practices in mind.
               </p>
               <p className="text-lg leading-relaxed text-gray-600">
-                If you're looking to rapidly build user interfaces that are visually consistent,
-                responsive, and 508 compliant, check out our Portal Component Library today!
+                If you&apos;re looking to rapidly build user interfaces that are visually
+                consistent, responsive, and 508 compliant, check out our Portal Component Library
+                today!
               </p>
             </div>
           </div>
@@ -150,11 +153,13 @@ export function Products() {
               className="absolute inset-0 pointer-events-none"
               style={{ bottom: -250, right: -180 }}
             >
-              <img
+              <Image
                 src="/hompage_circles.gif"
                 alt=""
                 className="w-full h-full object-contain object-right hidden md:block"
                 aria-hidden="true"
+                width={600}
+                height={600}
               />
             </div>
             <a
@@ -165,10 +170,12 @@ export function Products() {
               className="block transition-transform hover:scale-105"
               aria-label="View Portal Component Library on ServiceNow Store"
             >
-              <img
+              <Image
                 src="/uspcl.png"
                 alt="Portal Component Library on ServiceNow Store"
                 className="w-full max-w-lg h-auto rounded-lg z-10"
+                width={800}
+                height={800}
               />
             </a>
           </div>
