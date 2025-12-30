@@ -97,8 +97,9 @@
   },
   "pnpm": {
     "onlyBuiltDependencies": [
-      "sharp",
       "esbuild",
+      "msw",
+      "sharp",
       "unrs-resolver"
     ]
   },
