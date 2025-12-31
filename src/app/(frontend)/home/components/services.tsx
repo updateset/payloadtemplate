@@ -92,7 +92,7 @@ export function Services({ services }: ServicesProps) {
       // Script doesn't exist, load it
       const script = document.createElement('script')
       script.src =
-        'https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.5.2/dist/unicornStudio.umd.js'
+        'https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.0.0/dist/unicornStudio.umd.js'
       script.onload = initializeUnicornStudio
       ;(document.head || document.body).appendChild(script)
     } else if (window.UnicornStudio && !window.UnicornStudio.isInitialized) {
@@ -186,7 +186,7 @@ export function Services({ services }: ServicesProps) {
       <div className="absolute inset-0 w-full h-full flex items-center pointer-events-none z-0">
         <div
           ref={animationRef}
-          data-us-project="vmYNaUGJGU2jLtpFDpTe"
+          data-us-project="9njaAiVDe2hmxMOOUDbj"
           data-us-production="true"
           style={{ width: '1440px', height: '900px' }}
         />

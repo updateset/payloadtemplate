@@ -22,7 +22,7 @@ export function Hero() {
       window.UnicornStudio = { isInitialized: false }
       const script = document.createElement('script')
       script.src =
-        'https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.5.2/dist/unicornStudio.umd.js'
+        'https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.0.0/dist/unicornStudio.umd.js'
       script.onload = function () {
         if (window.UnicornStudio && !window.UnicornStudio.isInitialized) {
           UnicornStudio.init()
@@ -39,7 +39,7 @@ export function Hero() {
     <section className="relative flex h-screen w-full items-end justify-start overflow-hidden">
       {/* Unicorn.studio Interactive Background Element */}
       <div
-        data-us-project="Rl7VyWubJZuUIlC0N7wY"
+        data-us-project="6N61sSjBgYSsfl58w9RV"
         data-us-production="true"
         className="absolute inset-0 z-0"
         style={{ width: '100%', height: '100%' }}
