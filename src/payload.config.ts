@@ -34,6 +34,16 @@ export default buildConfig({
     components: {
       beforeLogin: ['@/components/BeforeLogin'],
     },
+    dashboard: {
+      widgets: [
+        {
+          slug: 'user-stats',
+          ComponentPath: '@/components/UserStats/index.tsx',
+          minWidth: 'medium',
+          maxWidth: 'full',
+        },
+      ],
+    },
     importMap: {
       baseDir: path.resolve(dirname),
     },

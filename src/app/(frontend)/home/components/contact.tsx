@@ -13,22 +13,22 @@ export function Contact() {
               <h2 className="mb-6 text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl pb-6">
                 Lets Talk Business
               </h2>
-              <div className="max-w-3xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
-                <p className="font-bold">Phone</p>
-                <p>
+              <div className="max-w-3xl text-lg leading-relaxed text-muted-foreground sm:text-xl flex flex-col">
+                <div className="font-bold">Phone</div>
+                <div>
                   <a style={{ color: '#40c2f1' }} href="tel:+16783331196">
                     +1 678-333-1196
                   </a>
-                </p>
+                </div>
                 <br />
-                <p className="font-bold">Email</p>
-                <p>
+                <div className="font-bold">Email</div>
+                <div className="pb-6">
                   <a style={{ color: '#40c2f1' }} href="mailto:hello@updateset.com">
                     hello@updateset.com
                   </a>
-                </p>
+                </div>
 
-                <div className="absolute bottom-5 right-5 z-10">
+                <div className="md:absolute md:bottom-5 md:right-5 md:z-10">
                   <a href="https://www.linkedin.com/company/updateset" target="_blank">
                     <svg
                       fill="#40c2f1"
